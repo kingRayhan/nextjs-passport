@@ -17,15 +17,15 @@ const getOAuthUrls: (
 })
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
-const hostingURL = process.env.APP_URL
+const hostingURL = 'https://nextjs-passport.now.sh'
 
 const appConfig: AppConfig = {
 	isDevelopment,
 	hostingURL,
 	github: {
 		passReqToCallback: false,
-		clientID: process.env.GITHUB_CLIENTID,
-		clientSecret: process.env.GITHUB_CLIENTSECRET,
+		clientID: 'Iv1.68e005921c9168f0',
+		clientSecret: '64f179e150ddcb2ba8e51649f09b7375207bdea7',
 		...getOAuthUrls(hostingURL, 'github'),
 		scope: 'user:email'
 	}
